@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Open+Sans:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    background-color: #201b2c;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "h h"
+    "m m";
+}
+
+main{
+    grid-area: m;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "e d";
+}
+
+header{
+    grid-area: h;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > img[alt="logo"]{
+    width: 150px;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    list-style: none;
+    padding-right: 80px;
+    color: white;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.barrinha::after{
+    content: '';
+    display: block;
+    width: 46px;
+    height: 0.3rem;
+    background-color: #FF7F50;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.barrinha{
+    cursor: pointer;
+}
+
+li:hover{
+    color: #FF7F50;
+    cursor: pointer;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #FF7F50;
+}
+
+#registrar-btn{
+    border: 3px solid #FF7F50;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.direita{
+    grid-area: d;
+}
+
+.direita > img{
+    width: 80%;
+    height: 100%;
+    margin-left: 50px;
+}
+
+.esquerda{
+    grid-area: e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    font-size: 50px;
+    color: white;
+}
+
+span{
+    color: #FF7F50;
+}
+
+.esquerda > p{
+    padding: 20px;
+    color: white;
+    display: flex;
+    font-size: 28px;
+    margin-top: 60px;
+}
+
+button{
+    margin-top: 50px;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    color: #201b2c;
+    background-color: #FF7F50;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #a86147;
+}
+
+@media (max-width: 844px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        "h"
+        "m";
+    }
+
+    header{
+        grid-area: h;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header > ul{
+        font-size: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 75px;
+        justify-content: space-around;
+    }
+
+    ul{
+        gap: 30px;
+    }
+
+    main{
+        grid-area: m;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "e"
+        "d";
+        margin-top: 30px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+    .direita > img{
+        width: 65%;
+        margin-left: 80px;
+    }
+
+    .esquerda > p{
+        font-size: 20px;
+        flex-wrap: wrap;
+        margin-left: 25px;
+    }
+
+    .barrinha::after{
+        display: none;
+    }
+}

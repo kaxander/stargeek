@@ -1,0 +1,160 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Open+Sans:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh;
+    grid-template-areas: 
+    "m";
+}
+
+main{
+    background-color: #201b2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: m;
+}
+
+img{
+    width: 200px;
+}
+
+main > form{
+    width: 50%;
+    background-color: #2f2841;
+    border-radius: 30px;
+    margin-top: 40px;
+    box-shadow: -8px 0px 40px -5px #1c161e;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #db6a41;
+    text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.371);
+}
+
+i{
+    position: absolute;
+    margin-left: 300px;
+    margin-top: -150px;
+    font-size: 60px;
+    color: #FF7F50;
+}
+
+.nome{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nome > label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label{
+    font-size: 20px;
+    color: #FF7F50;
+}
+
+input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 5vh;
+    border-radius: 10px;
+}
+
+.categoria{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.categoria > label{
+    font-size: 30px;
+}
+
+.categoria > select{
+    height: 50px;
+    border-radius: 10px;
+}
+
+form > .nome, .categoria{
+    margin-top: 25px;
+}
+
+button{
+    width: 300px;
+    padding: 16px 0;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #FF7F50;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #c8633f;
+    margin-top: 50px;
+}
+
+@media (max-width:844px){
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100vh;
+        grid-template-areas: 
+        "m";
+    }
+
+    main{
+        width: 100%;
+        height: 100%;
+    }
+
+
+    main > form{
+        width: 90%;
+    }
+
+    i{
+        display: none;
+    }
+
+    img{
+        width: 80px;
+    }
+
+    input{
+        width: 150px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    button{
+        width: 150px;
+    }
+}

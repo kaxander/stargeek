@@ -24,42 +24,25 @@ main{
     grid-area: m;
 }
 
-img{
-    width: 200px;
+form{
+    display: flex;
+    flex-direction: column;
 }
 
 main > form{
-    width: 50%;
+    width: 40%;
+    height: 70%;
     background-color: #2f2841;
     border-radius: 30px;
     margin-top: 40px;
     box-shadow: -8px 0px 40px -5px #1c161e;;
     display: flex;
-    flex-direction: column;
     align-items: center;
-}
-
-h1{
-    font-size: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #db6a41;
-    text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.371);
-}
-
-i{
-    position: absolute;
-    margin-left: 300px;
-    margin-top: -150px;
-    font-size: 60px;
-    color: #FF7F50;
 }
 
 .nome{
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    gap: 60px;
 }
 
 .nome > label{
@@ -68,31 +51,40 @@ i{
     align-items: center;
 }
 
-label{
-    font-size: 20px;
-    color: #FF7F50;
-}
-
-input{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.nome > input{
     width: 20vw;
     height: 5vh;
     border-radius: 10px;
 }
 
+.descricao{
+    display: flex;
+    gap: 100px;
+    margin-top: 40px;
+}
+
+.descricao > input{
+    width: 20vw;
+    height: 20vh;
+    border-radius: 10px;
+}
+
+label{
+    font-size: 20px;
+    color: #FF7F50;
+}
+
 .categoria{
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    gap: 100px;
 }
 
 .categoria > label{
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .categoria > select{
+    width: 300px;
     height: 50px;
     border-radius: 10px;
 }
@@ -101,8 +93,14 @@ form > .nome, .categoria{
     margin-top: 25px;
 }
 
+.file > input{
+    margin-top: 40px;
+    margin-right: 210px;
+    color: #c8633f;
+}
+
 button{
-    width: 300px;
+    width: 200px;
     padding: 16px 0;
     margin: 25px;
     border: none;
@@ -138,20 +136,8 @@ button{
         width: 90%;
     }
 
-    i{
-        display: none;
-    }
-
-    img{
-        width: 80px;
-    }
-
     input{
         width: 150px;
-    }
-
-    h1{
-        font-size: 20px;
     }
 
     button{

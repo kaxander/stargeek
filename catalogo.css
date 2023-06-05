@@ -12,12 +12,124 @@
 .container{
     display: grid;
     grid-template-columns: repeat(12,1fr);
-    grid-template-rows: 10vh 90vh;
+    grid-template-rows: 120px auto;
     grid-template-areas: 
     "n n h h h h h h h h h"
     "n n m m m m m m m m m";
-
 }
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    row-gap: 20px;
+}
+
+.cadmodal{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadmodal > form{
+    background-color: #2f2841;
+    border-radius: 30px;
+    box-shadow: 0px 10px 40px -12px #342b36;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.nome{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.nome > input{
+    border-radius: 10px;
+}
+
+.descricao{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.descricao > input{
+    border-radius: 10px;
+}
+
+label{
+    font-size: 20px;
+    color: #FF7F50;
+    text-shadow: 0.1em 0.1em 0.1em black;
+}
+
+.categoria{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.categoria > label{
+    font-size: 20px;
+}
+
+.categoria > select{
+    border-radius: 10px;
+}
+
+
+.file > input{
+    color: #c8633f;
+}
+
+button{
+    width: 200px;
+    padding: 16px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #FF7F50;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #c8633f;
+}
+
+.btnn{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.btn{
+    display: block;
+}
+
+.btn02{
+    display: block;
+}
+
+.btnf > button{
+    background: #241a31;
+    color: #FF7F50;
+    box-shadow: 0px 10px 40px -12px #494442;
+}
+
 header {
     grid-area: h;
     display: flex;
@@ -33,7 +145,6 @@ header > ul{
     justify-content: center;
     align-items: center;
     gap: 50px;
-    flex-wrap: wrap;
 }
 
 h3{
@@ -59,11 +170,7 @@ ul::after{
 
 nav > img{
     width: 150px;
-}
-
-img{
     position: absolute;
-    margin-left: -15px;
 }
 
 i{
@@ -80,7 +187,6 @@ nav{
     flex-direction: column;
     justify-content: space-between;
     width: 10vw;
-  
     
 }
 
@@ -95,72 +201,82 @@ main{
     display: flex;
     flex-direction: column;
     width: 90vw;
+    height: 644px;
+    gap: 40px;
+}
+
+main > .cadastrar{
+    display: flex;
+    justify-content: center;
 }
 
 .cards{
+    margin: 30px 30px;
     display: flex;
-    justify-content: center;
-    padding-top: 100px;
-    column-gap: 120px;
+    flex-direction: row;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-.quadrado{
-    width: 230px;
-    height: 300px;
-    border: 120px solid;
-    border-color: #3e3447;
+.cards > div:hover{
+    transform: scale(1.06);
+    transition: 1.2s ease-out;
+    box-shadow: 10px 0px 40px -12px #000000;
+}
+
+.card{
+    width: 260px;
+    height: 340px;
+}
+
+.cardimagem img{
+    width: 260px;
+    height: 280px;
+    margin-left: 1px;
+    box-shadow: 0px 10px 0px -12px #000000;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    box-shadow: 0px -10px 20px -12px #000000;
+}
+
+.cardinfo {
+    width: 260px;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 0px 0px 10px 10px;
+    position: relative;
+    top: -17%;
+    opacity: 0;
+}
+
+.cardinfo:hover{
+ opacity: 1.0;
+ transition: 1s ease-out;
+
+}
+
+.cardnome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 261px;
+    height: 60px;
+    margin-left: 1px;
+    margin-top: -5px;
+    border: 3px solid black;
+    background-color: #564764;
     border-radius: 0px 0px 10px 10px;
     box-shadow: 0px 10px 40px -12px #000000;
 }
 
-.qicons{
-    width: 240px;
-    height: 50px;
-    border: 30px solid;
-    border-color: #564764;
-    border-radius: 0px 0px 10px 10px;
-    box-shadow: -8px 0px 40px -5px #1c161e;
-}
-
-.excluir > i{
-    color: gray;
-    cursor: pointer;
-}
-
-.excluir > i:hover{
-    color: rgb(107, 107, 107);
-}
-
-.star1 > i{
-    color: gray;
-    cursor: pointer;
-}
-
-.star1 > i:hover{
-    color: rgb(207, 207, 3);
-}
-
-.add > i{
-    color: gray;
-    cursor: pointer;
-}
-
-.add >i:hover{
-    color: #FF7F50;
-}
-
-.qicons > .icons{
+.cardnome p{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 40px;
-    margin-top: -10px;
-}
-
-.quadrado > .qicons{
-    margin-left: -120px;
-    margin-top: 130px;
+    font-size: 1rem;
+    font-weight: normal;
 }
 
 h1{
@@ -171,25 +287,16 @@ main > h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    margin-top:30px;
 }
 
-main > .card{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-a{
-    text-decoration: none;
-}
 
 @media (max-width:844px){
 
     .container{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 10vh 90vh;
+        grid-template-rows: 120px auto;
         grid-template-areas: 
         "n"
         "m";
@@ -198,7 +305,7 @@ a{
 
     main{
         width: 100%;
-        height: 100%;
+        height: 725px;
         display: flex;
         justify-content: space-evenly;
     }
@@ -220,8 +327,26 @@ a{
     }
 
     .cards{
-        max-height: 30rem;
-        gap: 100px;
         overflow-y: scroll;
+        gap: 100px;
+    }
+
+    
+
+    .categoria > select{
+        width: auto;
+    }
+
+    .cadmodal > form{
+        width: 80%;
+    }
+
+    .nome{
+        flex-direction: column;
+        gap: none;
+    }
+
+    .descricao{
+        flex-direction: column;
     }
 }

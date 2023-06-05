@@ -23,65 +23,14 @@
         </header>
 
         <main>
+           
             <h1>Faça seu catálogo</h1>
+
+            <div class="cadastrar">
+                <button id="btn">Cadastrar Item</button>
+            </div>
             <div class="cards">
-                <div class="card">
-                    <div class="quadrado">
-                        <div class="qicons">
-                            <div class="icons">
-                                <div class="excluir">
-                                    <i class="bi bi-trash3-fill"></i>
-                                </div>
-                                <div class="star1">
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                                <a href="client.html"><div class="add">
-                                    <i class="bi bi-plus-lg"></i>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="quadrado">
-                        <div class="qicons">
-                            <div class="icons">
-                                <div class="excluir">
-                                    <i class="bi bi-trash3-fill"></i>
-                                </div>
-                                <div class="star1">
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                                <a href="client.html"><div class="add">
-                                    <i class="bi bi-plus-lg"></i>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="quadrado">
-                        <div class="qicons">
-                            <div class="icons">
-                                <div class="excluir">
-                                    <i class="bi bi-trash3-fill"></i>
-                                </div>
-                                <div class="star1">
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                                <a href="client.html"><div class="add">
-                                    <i class="bi bi-plus-lg"></i>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                
             </div>
         </main>
 
@@ -92,5 +41,41 @@
             </div>
         </nav>
     </div>
+<!-- janela card modal -->
+
+<div class="cadmodal">
+    <form action="#">
+        <div class="nome">
+            <label for="usuario">Nome do Item:</label>
+            <input type="text" id="usuario" placeholder="    Insira o nome do seu item">
+        </div>
+        <div class="descricao">
+            <label>Descrição:</label>
+            <input type="text"  id="descricao" placeholder="     insira uma descrição">
+        </div>
+        <div class="categoria">
+            <label for="text">Categoria:</label>
+            <select name="conteudo" id="conteudo" class="conteudo">
+                <option value="F">Filmes</option>
+                <option value="S">Séries</option>
+                <option value="J">Jogos</option>
+                <option value="L">Livros</option>
+            </select>
+        </div>
+        <div class="file">
+            <input type="file" name="foto" id="foto">
+        </div>
+        <div class="btnn">
+            <button class="btn">Cadastrar</button>
+            <button class="btn02">Concluir</button>
+            <div class="btnf">
+                <button onclick="fechar()">Fechar</button>
+            </div> 
+        </div>
+        <input type="hidden" id="idalterar">
+    </form>
+</div>
+
+    <script src="catalogo.js"></script>
 </body>
 </html>

@@ -11,21 +11,25 @@
     <div class="container">
         <main>
             <form action="#">
-                <img src="imagens/logo.png" alt="logo">
-                <a href="catalogo.html"><i class="bi bi-reply-fill"></i></a>
-                <h1>Cadastrar Item</h1>
                 <div class="nome">
-                    <label for="usuario">Nome do Item</label>
+                    <label for="usuario">Nome do Item:</label>
                     <input type="text" name="usuario" placeholder="    Insira o nome do seu item">
                 </div>
+                <div class="descricao">
+                    <label>Descrição:</label>
+                    <input type="text" placeholder="     insira uma descrição">
+                </div>
                 <div class="categoria">
-                    <label for="text">Categoria</label>
+                    <label for="text">Categoria:</label>
                     <select name="conteudo" id="conteudo" class="conteudo">
                         <option value="F">Filmes</option>
                         <option value="S">Séries</option>
                         <option value="J">Jogos</option>
                         <option value="L">Livros</option>
                     </select>
+                </div>
+                <div class="file">
+                    <input type="file" name="foto" id="foto">
                 </div>
                 <button class="btn">Cadastrar</button>
             </form>
